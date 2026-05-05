@@ -1,0 +1,36 @@
+version: "2"
+
+run:
+  timeout: 5m
+  go: "1.25.0"
+  modules-download-mode: readonly
+
+linters:
+  enable:
+    - errcheck
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - misspell
+
+  settings:
+    misspell:
+      locale: US
+    staticcheck:
+      checks:
+        - all
+        - "-QF1001"  # De Morgan's law — readability trade-off
+        - "-QF1003"  # could use tagged switch — style preference
+        - "-QF1008"  # could remove embedded field — readability trade-off
+        - "-QF1012"  # Use fmt.Fprintf — WriteString(fmt.Sprintf) is fine for XML generation
+        - "-S1039"   # unnecessary fmt.Sprintf — readability preference
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+formatters:
+  enable:
+    - gofmt
+    - goimports

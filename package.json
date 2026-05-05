@@ -1,0 +1,57 @@
+{
+  "name": "@fatecannotbealtered-/office-cli",
+  "version": "1.0.0",
+  "description": "Local Office documents (Word, Excel, PPT, PDF) CLI for humans and AI Agents — read, write, search, convert, merge, split without leaving the terminal",
+  "keywords": [
+    "office",
+    "word",
+    "excel",
+    "powerpoint",
+    "pdf",
+    "cli",
+    "ai-agent",
+    "docx",
+    "xlsx",
+    "pptx",
+    "agent",
+    "openclaw"
+  ],
+  "author": "guosong6886@gmail.com",
+  "homepage": "https://github.com/fatecannotbealtered/office-cli#readme",
+  "bugs": {
+    "url": "https://github.com/fatecannotbealtered/office-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatecannotbealtered/office-cli.git"
+  },
+  "license": "MIT",
+  "bin": {
+    "office-cli": "scripts/run.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.js"
+  },
+  "files": [
+    "scripts/install.js",
+    "scripts/run.js",
+    "skills/",
+    "README.md",
+    "README_zh.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "engines": {
+    "node": ">=16"
+  }
+}
